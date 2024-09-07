@@ -1,0 +1,23 @@
+Core features:
+	1. Centralized Dashboard
+	2. SOS Feature for Ambulance Dispatch
+	3. OPD Queue Management
+	4. Basic Patient Record Management
+	5. Real-Time Bed Availability
+	6. Automatic notification System
+	7. User UI
+	8. Receptionist UI
+	9. Ambulance UI 
+___________________________________________________________________________________________________________________________________________________________
+Other Features include: 
+	1. Dietary system
+	2. Monetary System
+	3. etc
+___________________________________________________________________________________________________________________________________________________________
+
+* Centralized Dashboard:
+	A page that opens up after a user logins and shows user his her details and other features like appointment booking, and other featuers.
+__________________________________________________________________________________________________________________________________________________________
+* SOS Feature: 
+	A feature that sends a text or notification to ambulance.
+__________________________________________________________________________________________________________________________________________________________
