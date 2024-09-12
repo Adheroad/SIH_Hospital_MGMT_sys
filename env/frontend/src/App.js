@@ -1,13 +1,15 @@
 import React from 'react';
-import { Button } from '@mui/material';
-
+import { Routes, Route } from 'react-router-dom';
+import MainIndex from './MainIndex';
+import Home from './Home'
+import './App.css';
 function App() {
   return (
     <div>
-      <h1>Hospital Management System</h1>
-      <Button variant="contained" color="primary">
-        SOS Ambulance
-      </Button>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mainindex" element={<MainIndex />} />
+      </Routes>
     </div>
   );
 }
