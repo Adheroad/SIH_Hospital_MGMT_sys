@@ -16,7 +16,19 @@ function Home(){
                 <h1>Life-saving care, just a click away</h1>
                 <p>Get started with your free account today. No credit card required.</p>
                 <form>
-                  {/* Login form elements */}
+                  {/* Login form elements */}<div className="input-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" placeholder="name@email.com" required />
+                  </div>
+                  <div className="input-group">
+                    <label htmlFor="password">Password</label>
+                    <input type="password" id="password" placeholder="password must be 8 digits with special symbols" required />
+                  </div>
+                  <div className="checkbox-group">
+                    <input type="checkbox" id="updates" />
+                    <label htmlFor="updates">Receive notification for my appointments.</label>
+                  </div>
+                  <button type="submit" className="submit-btn">Create my account</button>
                 </form>
                 <div className="or-divider">OR</div>
                 <button className="google-signup-btn">
