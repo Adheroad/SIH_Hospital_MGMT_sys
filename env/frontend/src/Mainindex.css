@@ -98,6 +98,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  text-decoration: none;
 }
 
 .card {
@@ -109,22 +110,38 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.card a {
+  text-decoration: none; 
+/* This removes the underline */
+}
+
+/* Ensure h3 inside button is not underlined */
+.card a h3 {
+  text-decoration: none;
   color: #007bff;
-  animation: text-pop 1.5s ease infinite alternate;
 }
 
-.card p {
-  font-size: 24px;
+.card button {
+  font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: #fcf8f8;
+  background-color: #2266cd;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.card a button {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fcf8f8;
+  background-color: #2266cd;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.card a button:hover {
+  background-color: #0044cc;
 }
 
 /* Text Animation */
@@ -192,11 +209,11 @@ body {
 
   .sidebar-links li {
     margin: 10px 0;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding-left: 20px;
-      overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 20px;
+    overflow: auto;
   }
 
   .main-content {

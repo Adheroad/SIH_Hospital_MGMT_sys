@@ -1,5 +1,6 @@
 import React from "react";
 import './Mainindex.css'
+import { Link } from 'react-router-dom';
 import '.'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 function MainIndex() {
@@ -37,24 +38,40 @@ function MainIndex() {
         {/* Dashboard Content */}
         <div className="dashboard-cards">
           <div className="card">
-            <h3>Total Patients</h3>
-            <p>150</p>
+            {/* internal link to doctor availability */}
+      <a href="#check-doctor"class='button'>
+      <h3> Doctor Availability</h3>
+      
+      <button>Check Now</button>
+      </a>
           </div>
           <div className="card">
-            <h3>Appointments</h3>
-            <p>23</p>
+          <a href="#opd-queue-management" class='button'>
+      <h3> OPD Queue</h3>
+    
+      <button> Check Now</button>
+      </a>
           </div>
           <div className="card">
-            <h3>Doctors Available</h3>
-            <p>8</p>
+          <a href="#Real-time" class='button'>
+          <h3>Real-Time Bed Availability </h3>
+          <button>Check Now</button>
+      </a>
+           
           </div>
           <div className="card">
-            <h3>Emergency Requests</h3>
-            <p>5</p>
+          <a href="#feedback-and-support" class="button">
+          <h3>Feedback and Support</h3>
+          <button class='button'>Check Now </button>
+      </a>
           </div>
-          <div className="card">
-            <h3>Dietary Plans</h3>
-            <p>12 Active</p>
+
+{/* External link to doctor availability */}
+
+
+<div className="card">
+            <h3>Inventory Items</h3>
+            <p>30 Stock</p>
           </div>
           <div className="card">
             <h3>Inventory Items</h3>
@@ -73,18 +90,31 @@ function MainIndex() {
         {/* Additional Sections */}
         <div className="additional-sections">
           <section className="dietary-section">
-            <h2>Dietary Overview</h2>
-            <p>Manage patient diets and monitor meal plans for balanced nutrition.</p>
+          <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
+      <h3> Doctor Availability</h3>
+      </a>
+            <p1>You can check the availability of our doctors easily through our website. Browse our comprehensive list of specialists and view their available time slots in real-time. Book an appointment that fits your schedule with just a few clicks.</p1>
           </section>
 
           <section className="inventory-section">
-            <h2>Bed-Availability</h2>
-            <p>Check the availability of beds </p>
+          <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
+      <h3> OPD Queue</h3>
+      </a>
+            <p1>You can check the availability of our doctors easily through our website. Browse our comprehensive list of specialists and view their available time slots in real-time. Book an appointment that fits your schedule with just a few clicks.</p1>
           </section>
 
-          <section className="billing-section">
-            <h2>Billing and Finance</h2>
-            <p>Oversee pending bills, transactions, and overall hospital revenue.</p>
+          <section className="-section">
+          <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
+      <h3> Real-time Bed Availability </h3>
+      </a>
+            <p1>Our website provides real-time updates on bed availability, allowing you to check current bed statuses instantly. This feature helps you make informed decisions and ensures you can secure the appropriate care without unnecessary delays.</p1>
+          </section>
+        
+          <section className="-section">
+          <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
+      <h3> Feedback and support</h3>
+      </a>
+            <p1>We value your feedback and are here to assist you. Use our dedicated support section to provide suggestions or report any issues, and our team will promptly address your concerns to enhance your experience.</p1>
           </section>
         </div>
       </main>
