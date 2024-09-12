@@ -98,8 +98,7 @@ p {
 
 .checkbox-group {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: center; margin-bottom: 20px;
 }
 
 .checkbox-group input {
