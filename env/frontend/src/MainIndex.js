@@ -9,15 +9,15 @@ function MainIndex() {
       <aside className="sidebar">
         <div className="sidebar-logo">E-Hospital</div>
         <ul className="sidebar-links">
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Appointments</a></li>
-          <li><a href="#">Patients</a></li>
-          <li><a href="#">Doctors</a></li>
-          <li><a href="#">Dietary</a></li>
-          <li><a href="#">Bed-Availability</a></li>
-          <li><a href="#">Billing</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="dashboard#">Dashboard</a></li>
+          <li><a href="appointments#">Appointments</a></li>
+          <li><a href="#patients">Patients</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <li><a href="#dietary">Dietary</a></li>
+          <li><a href="#beds">Bed-Availability</a></li>
+          <li><a href="#billing">Billing</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#logout">Logout</a></li>
         </ul>
       </aside>
 
