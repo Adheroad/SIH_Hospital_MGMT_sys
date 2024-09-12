@@ -54,7 +54,7 @@ function MainIndex() {
           </div>
           <div className="card">
             <a href="#feedback-support" className="button">
-              <h3>Patient Registration</h3>
+              <h3>Feedback and Support</h3>
               <button>Check Now</button>
             </a>
           </div>
@@ -77,21 +77,21 @@ function MainIndex() {
         {/* Additional Sections */}
         <div className="additional-sections">
           <section id="doctor-availability" className="additional-section">
-          <a href="https://external-link-to-doctor-availability.com">
+          <a href="http://localhost:3000/doctor">
           <h3>Doctor Availability</h3>
          </a>
             <p>You can check the availability of our doctors easily through our website. Browse our comprehensive list of specialists and view their available time slots in real-time. Book an appointment that fits your schedule with just a few clicks.</p>
           </section>
 
           <section id="opd-queue" className="additional-section">
-          <a href="https://external-link-to-doctor-availability.com">
+          <a href="a">
            <h3>OPD Queue</h3>
            </a>
             <p>You can check the status of the OPD queue in real-time. Stay updated and ensure you have the most up-to-date information before visiting the hospital.</p>
           </section>
 
           <section id="bed-availability" className="additional-section">
-          <a href="https://external-link-to-doctor-availability.com">
+          <a href="http://localhost:3000/bed">
       <h3>Real-time Bed Availability</h3>
       </a>
             <p>Our website provides real-time updates on bed availability, allowing you to check current bed statuses instantly. This feature helps you make informed decisions and ensures you can secure the appropriate care without unnecessary delays.</p>
@@ -99,8 +99,8 @@ function MainIndex() {
 
           <section id="feedback-support" className="additional-section">
         
-      <a href="http://localhost:3000/Registeration">
-      <h3> Patient Registration</h3>
+      <a href="a">
+      <h3> Feedback and Support</h3>
       </a>
             <p>We value your feedback and are here to assist you. Use our dedicated support section to provide suggestions or report any issues, and our team will promptly address your concerns to enhance your experience.</p>
           </section>
