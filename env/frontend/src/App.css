@@ -63,6 +63,7 @@ body {
   padding: 40px;
   display: flex;
   flex-direction: column;
+  background-color: #f5f5f5;
 }
 
 h1 {
@@ -98,7 +99,8 @@ p {
 
 .checkbox-group {
   display: flex;
-  align-items: center; margin-bottom: 20px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .checkbox-group input {

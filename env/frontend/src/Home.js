@@ -29,7 +29,7 @@ function Home() {
             if (response.ok) {
                 console.log('Login successful:', data);
                 // Redirect user to the dashboard or any other page upon successful login
-                navigate('/dashboard'); // Example: redirect to '/dashboard'
+                navigate('/mainindex'); // Example: redirect to '/dashboard'
             } else {
                 setErrorMessage(data.message); // Set error message from the response
             }
@@ -47,20 +47,24 @@ function Home() {
                     <p>Get started with your free account today. No credit card required.</p>
 
                     <form onSubmit={handleSubmit}>
-                        <div>
-                            <label>Email:</label>
+                        <div className="input-group">
+                            <label htmlFor="email">Email:</label>
                             <input
                                 type="email"
                                 value={email}
+                                id="email"
                                 onChange={(e) => setEmail(e.target.value)} // Update email state
+                                placeholder="test.sih@captivators.com"
                                 required
                             />
                         </div>
-                        <div>
-                            <label>Password:</label>
+                        <div className="input-group">
+                            <label htmlFor="password">Password:</label>
                             <input
                                 type="password"
                                 value={password}
+                                id="password"
+                                placeholder="Password must be 8 digits"
                                 onChange={(e) => setPassword(e.target.value)} // Update password state
                                 required
                             />
