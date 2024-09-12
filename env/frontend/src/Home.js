@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+import { useAuth } from './components/AuthContext';
 import './App.css';
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     const [password, setPassword] = useState(''); // State for password
     const [errorMessage, setErrorMessage] = useState(''); // State for error messages
     const navigate = useNavigate();
+    const { login } = useAuth(); 
 
     const handleSOSClick = () => {
         navigate('/sos'); // Redirect to the SOS page
@@ -28,6 +30,7 @@ function Home() {
 
             if (response.ok) {
                 console.log('Login successful:', data);
+                login();
                 // Redirect user to the dashboard or any other page upon successful login
                 navigate('/mainindex'); // Example: redirect to '/dashboard'
             } else {
