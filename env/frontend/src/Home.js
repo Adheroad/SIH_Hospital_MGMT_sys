@@ -28,7 +28,10 @@ function Home(){
                     <input type="checkbox" id="updates" />
                     <label htmlFor="updates">Receive notification for my appointments.</label>
                   </div>
-                  <button type="submit" className="submit-btn">Create my account</button>
+                  <section id='submit-btn' className='submit-btn'>
+                  <a href='http://localhost:3000/Mainindex'> 
+                  <button type="submit" className="submit-btn">Create my account</button></a>
+                  </section>
                 </form>
                 <div className="or-divider">OR</div>
                 <button className="google-signup-btn">

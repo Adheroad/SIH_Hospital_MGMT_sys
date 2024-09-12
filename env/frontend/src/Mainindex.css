@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #237bff;
+  background-color: #3d79d2;
 }
 
 /* Dashboard Container */
@@ -118,7 +118,7 @@ body {
 /* Ensure h3 inside button is not underlined */
 .card a h3 {
   text-decoration: none;
-  color: #007bff;
+  color: #5398e2;
 }
 .additional-sections a h3 {
   color: #666;
