@@ -1,0 +1,228 @@
+/* Mainindex.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #007bff;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin: 20px 0;
+}
+
+.sidebar-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-links li a:hover {
+  color: #ffdd57;
+  transform: translateX(10px);
+}
+
+/* Topbar Styles */
+.topbar {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.topbar-user {
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-user i {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.topbar-user i:hover {
+  color: #ffdd57;
+  transform: rotate(360deg);
+}
+
+/* Dashboard Content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f6f9;
+  overflow-y: auto;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #007bff;
+  animation: text-pop 1.5s ease infinite alternate;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Animation */
+@keyframes text-pop {
+  0% {
+    color: #007bff;
+  }
+  100% {
+    color: #ffdd57;
+  }
+}
+
+/* Additional Sections */
+.additional-sections {
+  margin-top: 40px;
+}
+
+.additional-sections section {
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.additional-sections section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.additional-sections section p {
+  font-size: 16px;
+  color: #666;
+}
+
+.additional-sections section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+
+/* For Smartphones */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    order: 1;
+  }
+
+  .sidebar-links li {
+    margin: 10px 0;
+  }
+
+  .main-content {
+    order: 2;
+    padding: 10px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+}
+
+/* For Tablets and Smaller Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .card p {
+    font-size: 22px;
+  }
+
+  .additional-sections section h2 {
+    font-size: 20px;
+  }
+}
+
+/* For Desktops */
+@media (min-width: 1025px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card p {
+    font-size: 24px;
+  }
+}
