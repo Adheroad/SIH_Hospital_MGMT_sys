@@ -1,279 +1,203 @@
-/* Mainindex.css */
-
-/* General Styles */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #237bff;
-}
-
-/* Dashboard Container */
-.dashboard-container {
+  font-family: Arial, sans-serif;
   display: flex;
-  height: 100vh;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7fa;
+  border-radius: 50px;
 }
 
-/* Sidebar Styles */
-.sidebar {
-  width: 250px;
-  background-color: #00aaff;
-  padding: 20px;
-  color: white;
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.image-container {
+  flex: 1;
+  background-color: #c1def4;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.sidebar-logo {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.sidebar-links {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-links li {
-  margin: 20px 0;
-}
-
-.sidebar-links li a {
-  text-decoration: none;
-  color: rgb(243, 245, 247);
-  font-size: 18px;
-  display: block;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.sidebar-links li a:hover {
-  color: #ffdd57;
-  transform: translateX(20px);
-}
-
-/* Topbar Styles */
-.topbar {
-  width: 100%;
-  background-color: #2d42ab;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.topbar-user {
-  font-size: 18px;
-  color: #fdfbfb;
-  display: flex;
-  align-items: center;
-}
-
-.topbar-user i {
-  font-size: 20px;
-  margin-left: 10px;
-  color: #007bff;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.topbar-user i:hover {
-  color: #ffdd57;
-  transform: rotate(360deg);
-}
-
-/* Dashboard Content */
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #f4f6f9;
-  overflow-y: auto;
-}
-
-.dashboard-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  text-decoration: none;
-}
-
-.card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  order: -1; /* Move image-container to the top on small screens */
 }
 
-.card a {
-  text-decoration: none; 
-/* This removes the underline */
-}
-
-/* Ensure h3 inside button is not underlined */
-.card a h3 {
-  text-decoration: none;
-  color: #007bff;
-}
-.additional-sections a h3 {
-  color: #666;
-  text-decoration: none;
- }
-
- .additional-sections a {
-  text-decoration: none;
- }
- .additional-sections a h3:hover {
+.image-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
   color: black;
 }
-.card button {
-  font-size: 14px;
-  font-weight: bold;
-  color: #fcf8f8;
-  background-color: #2266cd;
-}
 
-.card a button {
-  font-size: 14px;
-  font-weight: bold;
-  color: #fcf8f8;
-  background-color: #2266cd;
+.sos {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
   border: none;
-  cursor: pointer;
-  padding: 10px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.card a button:hover {
-  background-color: #0044cc;
+.sos:hover {
+  background-color: darkred;
 }
 
-/* Text Animation */
-@keyframes text-pop {
-  0% {
-    color: #007bff;
-  }
-  100% {
-    color: #57ff65;
-  }
+/* Form Styling */
+.form-container {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
 }
 
-/* Additional Sections */
-.additional-sections {
-  margin-top: 40px;
+h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.additional-sections section {
-  margin-bottom: 30px;
-  background-color: white;
-  padding: 20px;
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
-.additional-sections section h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #007bff;
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.additional-sections section p {
-  font-size: 16px;
-  color: #666;
+.checkbox-group input {
+  margin-right: 10px;
 }
 
-.additional-sections section:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.submit-btn {
+  background-color: #203fdc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
 }
 
-/* Responsive Design */
+.submit-btn:hover {
+  background-color: #0f344e;
+}
 
-/* For Smartphones */
+.or-divider {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #aaaaaa;
+}
+
+.google-signup-btn {
+  background-color: #DB4437;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-signup-btn i {
+  margin-right: 8px;
+}
+
+.google-signup-btn:hover {
+  background-color: #8f2b22;
+}
+
+.login-link,
+.terms {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.login-link a,
+.terms a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .dashboard-container {
+  .login-container {
     flex-direction: column;
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
   }
 
-  .sidebar-logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 0;
+  .form-container {
+    padding: 20px;
   }
 
-  .sidebar {
-    width: 100vw;
-    height: 250vh;
+  .image-container {
+    padding: 20px;
+    order: -1; /* Ensure image-container appears before form-container */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn,
+  .google-signup-btn,
+  .sos {
     padding: 10px;
-    order: 1;
-    overflow: scroll;
+    font-size: 0.9rem;
   }
 
-  .sidebar-links li {
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding-left: 20px;
-    overflow: auto;
-  }
-
-  .main-content {
-    order: 2;
-    padding: 10px;
-  }
-
-  .dashboard-cards {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-.additional-sections a h3 {
-  color: #666;
-  text-decoration: none;
- }
-
- .additional-sections a {
-  text-decoration: none;
- }
- .additional-sections a h3:hover {
-  color: black;
-}
-  .card p {
-    font-size: 20px;
-  }
-}
-
-/* For Tablets and Smaller Laptops */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .dashboard-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .card p {
-    font-size: 22px;
-  }
-
-  .additional-sections section h2 {
-    font-size: 20px;
-  }
-}
-
-/* For Desktops */
-@media (min-width: 1025px) {
-  .dashboard-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .card p {
-    font-size: 24px;
+  .image-container p {
+    font-size: 1rem;
   }
 }
