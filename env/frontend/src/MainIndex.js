@@ -1,8 +1,8 @@
 import React from "react";
-import './Mainindex.css'
+import './Mainindex.css';
 import { Link } from 'react-router-dom';
-import '.'
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 function MainIndex() {
   return (
     <div className="dashboard-container">
@@ -24,55 +24,42 @@ function MainIndex() {
 
       {/* Main Content Area */}
       <main className="main-content">
-     
         <nav className="topbar">
-        
           <div className="topbar-user">
-          <span>Welcome, user </span>
-          <i class="fa-solid fa-user"></i>
-          
-            
+            <span>Welcome, user </span>
+            <i className="fa-solid fa-user"></i>
           </div>
         </nav>
-        
+
         {/* Dashboard Content */}
         <div className="dashboard-cards">
           <div className="card">
-            {/* internal link to doctor availability */}
-      <a href="#check-doctor"class='button'>
-      <h3> Doctor Availability</h3>
-      
-      <button>Check Now</button>
-      </a>
+            {/* Internal link to doctor availability */}
+            <a href="#doctor-availability" className="button">
+              <h3>Doctor Availability</h3>
+              <button>Check Now</button>
+            </a>
           </div>
           <div className="card">
-          <a href="#opd-queue-management" class='button'>
-      <h3> OPD Queue</h3>
-    
-      <button> Check Now</button>
-      </a>
+            <a href="#opd-queue" className="button">
+              <h3>OPD Queue</h3>
+              <button>Check Now</button>
+            </a>
           </div>
           <div className="card">
-          <a href="#Real-time" class='button'>
-          <h3>Real-Time Bed Availability </h3>
-          <button>Check Now</button>
-      </a>
-           
+            <a href="#bed-availability" className="button">
+              <h3>Real-Time Bed Availability</h3>
+              <button>Check Now</button>
+            </a>
           </div>
           <div className="card">
-          <a href="#feedback-and-support" class="button">
-          <h3>Feedback and Support</h3>
-          <button class='button'>Check Now </button>
-      </a>
+            <a href="#feedback-support" className="button">
+              <h3>Feedback and Support</h3>
+              <button>Check Now</button>
+            </a>
           </div>
 
-{/* External link to doctor availability */}
-
-
-<div className="card">
-            <h3>Inventory Items</h3>
-            <p>30 Stock</p>
-          </div>
+          {/* Static content */}
           <div className="card">
             <h3>Inventory Items</h3>
             <p>30 Stock</p>
@@ -89,32 +76,33 @@ function MainIndex() {
 
         {/* Additional Sections */}
         <div className="additional-sections">
-          <section className="dietary-section">
+          <section id="doctor-availability" className="additional-section">
           <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
-      <h3> Doctor Availability</h3>
-      </a>
-            <p1>You can check the availability of our doctors easily through our website. Browse our comprehensive list of specialists and view their available time slots in real-time. Book an appointment that fits your schedule with just a few clicks.</p1>
+          <h3>Doctor Availability</h3>
+         </a>
+            <p>You can check the availability of our doctors easily through our website. Browse our comprehensive list of specialists and view their available time slots in real-time. Book an appointment that fits your schedule with just a few clicks.</p>
           </section>
 
-          <section className="inventory-section">
+          <section id="opd-queue" className="additional-section">
           <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
-      <h3> OPD Queue</h3>
-      </a>
-            <p1>You can check the availability of our doctors easily through our website. Browse our comprehensive list of specialists and view their available time slots in real-time. Book an appointment that fits your schedule with just a few clicks.</p1>
+           <h3>OPD Queue</h3>
+           </a>
+            <p>You can check the status of the OPD queue in real-time. Stay updated and ensure you have the most up-to-date information before visiting the hospital.</p>
           </section>
 
-          <section className="-section">
+          <section id="bed-availability" className="additional-section">
           <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
-      <h3> Real-time Bed Availability </h3>
+      <h3>Real-time Bed Availability</h3>
       </a>
-            <p1>Our website provides real-time updates on bed availability, allowing you to check current bed statuses instantly. This feature helps you make informed decisions and ensures you can secure the appropriate care without unnecessary delays.</p1>
+            <p>Our website provides real-time updates on bed availability, allowing you to check current bed statuses instantly. This feature helps you make informed decisions and ensures you can secure the appropriate care without unnecessary delays.</p>
           </section>
+
+          <section id="feedback-support" className="additional-section">
         
-          <section className="-section">
-          <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
-      <h3> Feedback and support</h3>
+      <a href="https://external-link-to-doctor-availability.com" target="_blank" rel="noopener noreferrer">
+      <h3> Feedback and Support</h3>
       </a>
-            <p1>We value your feedback and are here to assist you. Use our dedicated support section to provide suggestions or report any issues, and our team will promptly address your concerns to enhance your experience.</p1>
+            <p>We value your feedback and are here to assist you. Use our dedicated support section to provide suggestions or report any issues, and our team will promptly address your concerns to enhance your experience.</p>
           </section>
         </div>
       </main>
