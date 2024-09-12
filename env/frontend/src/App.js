@@ -7,6 +7,7 @@ import SOSMap from './components/SOSMap';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './components/AuthContext';
 import './App.css';
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (

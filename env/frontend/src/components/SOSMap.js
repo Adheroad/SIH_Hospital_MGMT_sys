@@ -15,7 +15,7 @@ const userIcon = new L.Icon({
 });
 
 const ambulanceIcon = new L.Icon({
-  iconUrl: 'https://cdn-icons-png.flaticon.com/512/2963/2963526.png',
+  iconUrl: 'https://img.icons8.com/?size=100&id=950&format=png&color=000000',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
