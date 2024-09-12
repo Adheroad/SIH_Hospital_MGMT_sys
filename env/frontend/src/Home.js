@@ -50,7 +50,10 @@ function Home(){
                 <p>If you find yourself in a very difficult situation, 
                   <br />
                   make sure to click the SOS button, no need to Sign up.</p>
-                <button className="sos" onClick={handleSOSClick}>SOS Emergency</button>
+                <button className="sos" onClick={handleSOSClick}>
+                  <i class="fa-solid fa-truck-medical "> </i>
+                  SOS Emergency
+                    </button>
               </div>
             </div>
           </div>
