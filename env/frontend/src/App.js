@@ -1,21 +1,26 @@
+// src/App.js
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import MainIndex from './MainIndex';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './Home';
-import SOSMap from './SOSMap'; 
-import Registeration from './Registeration'; 
+import MainIndex from './MainIndex';
+import SOSMap from './components/SOSMap';
+import ProtectedRoute from './components/ProtectedRoute';
+import { AuthProvider } from './components/AuthContext';
 import './App.css';
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mainindex" element={<MainIndex />} />
-        <Route path="/sos" element={<SOSMap />} /> 
-        <Route path="/Registeration" element={<Registeration />} /> 
-      </Routes>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sos" element={<SOSMap />} />
+          <Route path="/mainindex" element={<ProtectedRoute element={<MainIndex />} />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
+
 export default App;

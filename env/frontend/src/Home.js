@@ -1,62 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+import { useAuth } from './components/AuthContext';
 import './App.css';
 
-function Home(){
+function Home() {
+    const [email, setEmail] = useState(''); // State for email
+    const [password, setPassword] = useState(''); // State for password
+    const [errorMessage, setErrorMessage] = useState(''); // State for error messages
     const navigate = useNavigate();
+    const { login } = useAuth(); 
 
     const handleSOSClick = () => {
         navigate('/sos'); // Redirect to the SOS page
     };
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:5000/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }), // Send email and password to the server
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log('Login successful:', data);
+                login();
+                // Redirect user to the dashboard or any other page upon successful login
+                navigate('/mainindex'); // Example: redirect to '/dashboard'
+            } else {
+                setErrorMessage(data.message); // Set error message from the response
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            setErrorMessage('Server error, please try again later.');
+        }
+    };
+
     return (
         <div className="body">
             <div className="login-container">
-              <div className="form-container">
-                <h1>Life-saving care, just a click away</h1>
-                <p>Get started with your free account today. No credit card required.</p>
-                <form>
-                  {/* Login form elements */}<div className="input-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" placeholder="name@email.com" required />
-                  </div>
-                  <div className="input-group">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id="password" placeholder="password must be 8 digits with special symbols" required />
-                  </div>
-                  <div className="checkbox-group">
-                    <input type="checkbox" id="updates" />
-                    <label htmlFor="updates">Receive notification for my appointments.</label>
-                  </div>
-                  <section id='submit-btn' className='submit-btn'>
-                  <a href='http://localhost:3000/Mainindex'> 
-                  <button type="submit" className="submit-btn">Create my account</button></a>
-                  </section>
-                </form>
-                <div className="or-divider">OR</div>
-                <button className="google-signup-btn">
-                  <i className="fa-brands fa-google"></i> Sign in with Google
-                </button>
-                <p className="login-link">
-                  Already have an account? <a href="signin#">Sign in with google</a>
-                </p>
-                <p className="terms">
-                  By signing up, I agree to E-hospital <a href="#">terms & conditions</a>
-                </p>
-              </div>
+                <div className="form-container">
+                    <h1>Life-saving care, just a click away</h1>
+                    <p>Get started with your free account today. No credit card required.</p>
 
-              <div className="image-container">
-                <p className="emergency">EMERGENCY ALERT!</p>
-                <p>If you find yourself in a very difficult situation, 
-                  <br />
-                  make sure to click the SOS button, no need to Sign up.</p>
-                <button className="sos" onClick={handleSOSClick}>
-                  <i class="fa-solid fa-truck-medical "> </i>
-                  SOS Emergency
+                    <form onSubmit={handleSubmit}>
+                        <div className="input-group">
+                            <label htmlFor="email">Email:</label>
+                            <input
+                                type="email"
+                                value={email}
+                                id="email"
+                                onChange={(e) => setEmail(e.target.value)} // Update email state
+                                placeholder="test.sih@captivators.com"
+                                required
+                            />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="password">Password:</label>
+                            <input
+                                type="password"
+                                value={password}
+                                id="password"
+                                placeholder="Password must be 8 digits"
+                                onChange={(e) => setPassword(e.target.value)} // Update password state
+                                required
+                            />
+                        </div>
+                        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <div className="or-divider">OR</div>
+                    <button className="google-signup-btn">
+                        <i className="fa-brands fa-google"></i> Sign in with Google
                     </button>
-              </div>
+                    <p className="login-link">
+                        Already have an account? <a href="signin#">Sign in with Google</a>
+                    </p>
+                    <p className="terms">
+                        By signing up, I agree to E-hospital <a href="#">terms & conditions</a>
+                    </p>
+                </div>
+
+                <div className="image-container">
+                    <p className="emergency">EMERGENCY ALERT!</p>
+                    <p>If you find yourself in a very difficult situation, 
+                        <br />
+                        make sure to click the SOS button, no need to Sign up.
+                    </p>
+                    <button className="sos" onClick={handleSOSClick}>SOS Emergency</button>
+                </div>
             </div>
-          </div>
+        </div>
     );
 }
+
 export default Home;
