@@ -5,10 +5,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-   height: 100;
+  min-height: 100vh;
   background-color: #f4f7fa;
-  border-radius: 50px;
 }
 
 .login-container {
@@ -22,53 +20,7 @@ body {
   max-width: 1000px;
   width: 100%;
   overflow: hidden;
-  position: relative;
-  border-radius: 10px;
 }
-
-.image-container {
-  flex: 1;
-  background-color: hsl(206, 70%, 86%);
-  padding: 40px;
-  margin: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  order: -1; /* Move image-container to the top on small screens */
-}
-
-.image-container p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: black;
-}
-
-.sos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px ;
-  padding: 10px 20px;
-  background-color: #e74c3c;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.sos i {
-  margin-right: 10px; /* Adds space between icon and text */
-  font-size: 20px; /* Adjusts icon size */
-}
-
-.sos:hover {
-  background-color: #c0392b;
-}
-
 
 /* Form Styling */
 .form-container {
@@ -106,7 +58,7 @@ p {
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .checkbox-group {
@@ -120,7 +72,7 @@ p {
 }
 
 .submit-btn {
-  background-color: #203fdc;
+  background-color: #4CAF50;
   color: white;
   padding: 10px;
   border: none;
@@ -131,14 +83,14 @@ p {
 }
 
 .submit-btn:hover {
-  background-color: #0f344e;
+  background-color: #45a049;
 }
 
 .or-divider {
   margin: 20px 0;
   text-align: center;
   font-size: 1rem;
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .google-signup-btn {
@@ -159,10 +111,6 @@ p {
   margin-right: 8px;
 }
 
-.google-signup-btn:hover {
-  background-color: #8f2b22;
-}
-
 .login-link,
 .terms {
   margin-top: 15px;
@@ -176,13 +124,43 @@ p {
   text-decoration: none;
 }
 
+/* Emergency Alert Section */
+.image-container {
+  flex: 1;
+  background-color: #FBE9E7;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.sos {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sos:hover {
+  background-color: darkred;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .login-container {
     flex-direction: column;
     box-shadow: none;
     border-radius: 0;
-    position: relative;
   }
 
   .form-container {
@@ -191,7 +169,6 @@ p {
 
   .image-container {
     padding: 20px;
-    order: -1; /* Ensure image-container appears before form-container */
   }
 
   h1 {
