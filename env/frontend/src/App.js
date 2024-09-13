@@ -16,7 +16,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/mainindex" element={<MainIndex />} />
+        <Route path="/MainIndex" element={<MainIndex />} />
         <Route path="/sos" element={<SOSMap />} /> 
         <Route path="/Bed" element={< Bed />} />
         <Route path="/Doctor" element={< Doctor />} />
