@@ -14,35 +14,30 @@ function Home(){
             <div className="login-container">
               <div className="form-container">
                 <h1>Life-saving care, just a click away</h1>
-                <p>Get started with your free account today. No credit card required.</p>
+                <p>Get started with your free account today.</p>
                 <form>
                   {/* Login form elements */}<div className="input-group">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Log.in</label>
                     <input type="email" id="email" placeholder="name@email.com" required />
                   </div>
                   <div className="input-group">
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" placeholder="password must be 8 digits with special symbols" required />
                   </div>
-                  <div className="checkbox-group">
-                    <input type="checkbox" id="updates" />
-                    <label htmlFor="updates">Receive notification for my appointments.</label>
-                  </div>
-                  <section id='submit-btn' className='submit-btn'>
-                  <a href='http://localhost:3000/Mainindex'> 
-                  <button type="submit" className="submit-btn">Create my account</button></a>
-                  </section>
+              
+                 
                 </form>
-                <div className="or-divider">OR</div>
+               
                 <button className="google-signup-btn">
-                  <i className="fa-brands fa-google"></i> Sign in with Google
+                  <a href='http://localhost:3000/Registeration'>
+                  <i className="fa-brands fa-google"></i>
+                  <p1>Sign up Now</p1> 
+                  </a>
                 </button>
                 <p className="login-link">
-                  Already have an account? <a href="signin#">Sign in with google</a>
+                  Don't have an account? Sign up 
                 </p>
-                <p className="terms">
-                  By signing up, I agree to E-hospital <a href="#">terms & conditions</a>
-                </p>
+              
               </div>
 
               <div className="image-container">
@@ -50,10 +45,7 @@ function Home(){
                 <p>If you find yourself in a very difficult situation, 
                   <br />
                   make sure to click the SOS button, no need to Sign up.</p>
-                <button className="sos" onClick={handleSOSClick}>
-                  <i class="fa-solid fa-truck-medical "> </i>
-                  SOS Emergency
-                    </button>
+                <button className="sos" onClick={handleSOSClick}>SOS Emergency</button>
               </div>
             </div>
           </div>

@@ -143,7 +143,7 @@ p {
 
 .google-signup-btn {
   background-color: #DB4437;
-  color: white;
+  color: rgb(245, 240, 240);
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -153,10 +153,22 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .google-signup-btn i {
   margin-right: 8px;
+  color: #fffcfc;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+.google-signup-btn p1 {
+ text-decoration: none;
+ text-decoration-line: none;
+  color: #fffcfc;
+
 }
 
 .google-signup-btn:hover {

@@ -1,5 +1,5 @@
 import React from "react";
-import './Mainindex.css';
+import './MainIndex.css'
 import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -7,14 +7,11 @@ function MainIndex() {
   return (
     <div className="dashboard-container">
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="navbar-brand">E-Hospital </div>
-        
-      </nav>
+      
 
       {/* Sidebar */}
       <aside className="sidebar">
-        
+      <h3>E-hospital</h3>
         <ul className="sidebar-links">
           <li><Link to="/dashboard">Dashboard</Link></li>
           <li><Link to="/appointments">Appointments</Link></li>
@@ -78,12 +75,10 @@ function MainIndex() {
         {/* Additional Sections */}
         <div className="additional-sections">
           <section id="doctor-availability" className="additional-section">
-          <a href="https://external-link-to-doctor-availability.com">
+          <a href="http://localhost:3000/doctor">
           <h3>Doctor Availability</h3>
          </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-              <h3>Doctor Availability</h3>
-            </a>
+           
             <p>You can check the availability of our doctors easily through our website. Browse our comprehensive list of specialists and view their available time slots in real-time. Book an appointment that fits your schedule with just a few clicks.</p>
           </section>
 
@@ -95,7 +90,7 @@ function MainIndex() {
           </section>
 
           <section id="bed-availability" className="additional-section">
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="http://localhost:3000/bed" >
               <h3>Real-time Bed Availability</h3>
             </a>
             <p>Our website provides real-time updates on bed availability, allowing you to check current bed statuses instantly.</p>
