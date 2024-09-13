@@ -2,24 +2,30 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './Home';
-import MainIndex from './MainIndex';
-import SOSMap from './components/SOSMap';
-import ProtectedRoute from './components/ProtectedRoute';
-import { AuthProvider } from './components/AuthContext';
+import SOSMap from './SOSMap'; 
+import './Registeration'
 import './App.css';
-import 'leaflet/dist/leaflet.css';
+import './Bed'
+import Bed from './Bed';
+import './Doctor'
+import Doctor from './Doctor';
+import Registeration from './Registeration';
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sos" element={<SOSMap />} />
-          <Route path="/mainindex" element={<ProtectedRoute element={<MainIndex />} />} />
-        </Routes>
-      </Router>
-    </AuthProvider>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mainindex" element={<ProtectedRoute element={<MainIndex />} />} />
+        <Route path="/sos" element={<SOSMap />} /> 
+        <Route path="/Bed" element={< Bed />} />
+        <Route path="/Doctor" element={< Doctor />} />
+        <Route path="/Registeration" element={< Registeration />} />
+
+        
+   
+      </Routes>
+    </div>
   );
 }
 
