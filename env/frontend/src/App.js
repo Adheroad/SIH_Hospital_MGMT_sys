@@ -1,6 +1,6 @@
+// src/App.js
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import MainIndex from './MainIndex';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './Home';
 import SOSMap from './SOSMap'; 
 import './Registeration'
@@ -16,7 +16,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/MainIndex" element={<MainIndex />} />
+        <Route path="/mainindex" element={<ProtectedRoute element={<MainIndex />} />} />
         <Route path="/sos" element={<SOSMap />} /> 
         <Route path="/Bed" element={< Bed />} />
         <Route path="/Doctor" element={< Doctor />} />
@@ -28,4 +28,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
